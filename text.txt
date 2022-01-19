@@ -1,0 +1,8 @@
+int = 9,
+int в double = 9,
+double = 10,4,
+double в int = 10,
+decimal = 3,7,
+decimal в double = 3,7,
+float = 4,7,
+float в decimal = 4,7

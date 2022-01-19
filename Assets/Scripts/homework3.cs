@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using UnityEngine;
 
 public class homework3 : MonoBehaviour
@@ -38,12 +40,13 @@ public class homework3 : MonoBehaviour
         Debug.LogWarning($"Преобразование int в double = {iDouble}");
         
         Debug.Log(all);
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        string path = @"E:\Unity\3\classwork\homework\unity_homework_3_alexandr_folomeshkin\text.txt"; //Путь изменить на свой
+        using (StreamWriter sw = new StreamWriter(path, false, Encoding.Default))
+        {
+            sw.WriteLine(all);
+            Debug.Log("Переменные записаны в текстовый файл");
+        }
+
     }
 }
